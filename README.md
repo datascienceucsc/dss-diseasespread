@@ -1,6 +1,6 @@
 # DengAI: Predicting Disease Spread
 
-![A mosquito](https://community.drivendata.org/uploads/default/original/1X/0f3a28954438c90e1935d61f3f2c23e906feb39a.jpg)
+![A mosquito](https://community.drivendata.org/uploads/default/original/1X/0f3a28954438c90e1935d61f3f2c23e906feb39a.jpg?raw=true)
 
 Repository for our work on the  DengAI: Predicting Disease Spread competition on Driven Data
 
