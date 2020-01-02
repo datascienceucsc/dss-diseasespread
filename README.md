@@ -1,6 +1,7 @@
 # DengAI: Predicting Disease Spread
 
-![stack Overflow](http://lmsotfy.com/so.png)
+![A mosquito](http://www.pngall.com/mosquito-png)
+
 Repository for our work on the  DengAI: Predicting Disease Spread competition on Driven Data
 
 ## Installation
