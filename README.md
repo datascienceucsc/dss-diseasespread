@@ -1,6 +1,6 @@
 # DengAI: Predicting Disease Spread
 
-![A mosquito](http://www.pngall.com/mosquito-png)
+![A mosquito](http://www.pngall.com/wp-content/uploads/2016/05/Mosquito-High-Quality-PNG.png)
 
 Repository for our work on the  DengAI: Predicting Disease Spread competition on Driven Data
 
