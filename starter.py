@@ -11,8 +11,8 @@ import pandas as pd
 TRAIN_LEN = 1456
 TEST_LEN = 416
 
-X_train = pd.read_csv("data/dengue_features_train.csv")
-X_test = pd.read_csv("data/dengue_features_test.csv")
+X_train = pd.read_csv("data/raw/dengue_features_train.csv")
+X_test = pd.read_csv("data/raw/dengue_features_test.csv")
 
 y_train_pred = np.zeroes(LEN) 
 y_test_pred = np.zeroes(LEN)
