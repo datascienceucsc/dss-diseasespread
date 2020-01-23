@@ -49,11 +49,11 @@ def objective(X, y, hp_params, n_folds):
     neg_mae = np.mean(scores['test_score'])
     return {'loss' : (-neg_mae), 'status' : STATUS_OK}
 
-def optimize_xgb(X_train, y_train, prev_trials = Trials(),
+def optimize_xgb(X_train, y_train, n_iter = 20, prev_trials = Trials(),
     hp_space = default_param_space):
     """
     Parameters:
-    - X_train: training feature matrix
+    - X_train: training feature matrix. All columns must be numeric.
     - y_train: training target vector
     - prev_trials: hyperopt.Trials() object used to save progress
     - hp_space: space of hyperparameters to explore 
@@ -84,7 +84,7 @@ def optimize_xgb(X_train, y_train, prev_trials = Trials(),
         fn = partial(objective, X_train, y_train),
         space = hp_space,
         algo = tpe.suggest,
-        max_evals = 20, 
+        max_evals = n_iter, 
         trials = prev_trials, 
         rstate = np.random.RandomState(SEED))
 
