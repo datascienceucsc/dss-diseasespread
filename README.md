@@ -10,8 +10,31 @@ Start by following out usual [software setup guide](https://github.com/datascien
 
 Branch this repository into a branch for your group, then clone it.
 
-Next go to [drivendata.org](drivendata.org) and create an account. 
-Go to the [competition](https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/) to join it and save all parts of the dataset to `\data`
+Next go to [drivendata.org](drivendata.org) and create an account. \
+
+## Downloading original dataset
+To get a fresh copy of the original dataset, go to `src/data` and run
+```bash
+python get_data.py
+```
+
+## Using automated hyperaparameter tuning
+If you are familiar with `hyperopt`, define a search space yourself. Otherwise I provide a default one.
+In your script in `src/models` use
+
+```python
+from xgb_optimization import optimize_xgb
+best_params = optimize_xgb(X_train, y_train, num_iter)
+```
+Where best_params is a dictionary of the best parameters found, which you can then use as:
+```python
+from xgboost import XGBRegressor
+xgb_model = XGBRegressor(**best_params)
+```
+If you define your search space yourself, use
+```python
+best_params = optimize_xgb(X_train, y_train, num_iter, hp_space = search_space)
+```
 
 ## Saving your predictions
 
