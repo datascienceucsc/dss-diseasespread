@@ -19,6 +19,7 @@ python get_data.py
 ```
 
 ## Using automated hyperaparameter tuning
+
 If you are familiar with `hyperopt`, define a search space yourself. Otherwise I provide a default one.
 In your script in `src/models` use
 
@@ -26,7 +27,7 @@ In your script in `src/models` use
 from xgb_optimization import optimize_xgb
 best_params = optimize_xgb(X_train, y_train, num_iter)
 ```
-Where best_params is a dictionary of the best parameters found, which you can then use as:
+Where `best_params` is a dictionary of the best parameters found, which you can then use as:
 ```python
 from xgboost import XGBRegressor
 xgb_model = XGBRegressor(**best_params)
