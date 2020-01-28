@@ -85,7 +85,6 @@ def optimize_xgb(X_train, y_train, n_iter = 20, prev_trials = Trials(),
         space = hp_space,
         algo = tpe.suggest,
         max_evals = n_iter, 
-        trials = prev_trials, 
-        rstate = np.random.RandomState(SEED))
+        trials = prev_trials)
 
     return best_params
