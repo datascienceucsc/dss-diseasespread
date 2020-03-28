@@ -28,6 +28,21 @@ To get a fresh copy of the original dataset, go to `src/data` and run
 python get_data.py
 ```
 
+## Work
+
+Data exploration:
+- Anders [notebooks/apoirel-exploration-01.ipynb](notebooks/apoirel-exploration-01.ipynb)
+- Julian [jlehrer-exploration-01.ipynb](jlehrer-exploration-01.ipynb)
+
+Gradient boosted models:
+- [jlehrer-models-01.ipynb](jlehrer-models-01.ipynb)
+
+CLassical linear models:
+- [notebooks/apoirels-models-01.ipynb](notebooks/apoirels-models-01.ipynb) 01 through 04
+
+FBProphet models:
+- [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirels-models-01.ipynb)
+
 ## Results
 
 Current leaderboard position : 2191 (top 26%)
