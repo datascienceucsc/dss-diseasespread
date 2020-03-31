@@ -32,17 +32,17 @@ python get_data.py
 
 Data exploration:
 - Anders [notebooks/apoirel-exploration-01.ipynb](notebooks/apoirel-exploration-01.ipynb)
-- Julian [jlehrer-exploration-01.ipynb](jlehrer-exploration-01.ipynb)
+- Julian [notebooks/jlehrer-exploration-01.ipynb](notebooks/jlehrer-exploration-01.ipynb)
 
 Gradient boosted models:
-- [jlehrer-models-01.ipynb](jlehrer-models-01.ipynb)
+- [notebooks/jlehrer-models-01.ipynb](notebooks/jlehrer-models-01.ipynb)
 
 CLassical linear models:
 - [notebooks/apoirels-models-01.ipynb](notebooks/apoirels-models-01.ipynb) 01 through 04
 
 FBProphet models:
-- [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirels-models-01.ipynb)
+- [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirels-models-01.ipynb) 01 through 03
 
 ## Results
 
-Current leaderboard position : 2191 (top 26%)
+Current leaderboard position : 1067 (top 12%)
