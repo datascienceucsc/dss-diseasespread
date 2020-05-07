@@ -1,5 +1,5 @@
 # DengAI: Predicting Disease Spread
-*Anders Poirel, Julien Lehrer*
+*Anders Poirel, Julian Lehrer*
 
 ![A mosquito](http://www.pngall.com/wp-content/uploads/2016/05/Mosquito-High-Quality-PNG.png)
 
