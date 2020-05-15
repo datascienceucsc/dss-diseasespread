@@ -43,6 +43,6 @@ Classical lnear models + time-lagged features
 FBProphet models:
 - [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirel-prophet-01.ipynb) 01 through 03
 
-## Results 🏆
+## 🏆 Results 
 
 Current leaderboard position : 1067 (top 12%)
