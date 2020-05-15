@@ -1,5 +1,5 @@
 # DengAI: Predicting Disease Spread
-*Anders Poirel, Julien Lehrer*
+*Anders Poirel, Julian Lehrer*
 
 ![A mosquito](http://www.pngall.com/wp-content/uploads/2016/05/Mosquito-High-Quality-PNG.png)
 
@@ -38,10 +38,10 @@ Gradient boosted models:
 - [notebooks/jlehrer-models-01.ipynb](notebooks/jlehrer-models-01.ipynb)
 
 CLassical linear models:
-- [notebooks/apoirels-models-01.ipynb](notebooks/apoirels-models-01.ipynb) 01 through 04
+- [notebooks/apoirels-models-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 04
 
 FBProphet models:
-- [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirels-models-01.ipynb) 01 through 03
+- [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 03
 
 ## Results
 
