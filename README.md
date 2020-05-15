@@ -5,9 +5,8 @@ Repository for our work on the  DengAI: Predicting Disease Spread competition on
 
 ## Installation
 
-You'll need to have `conda` installed.
-Clone this repo.
-Next go to [drivendata.org](drivendata.org) and create an account if you want to see your leaderboard performance.
+*Requirements*:
+- `conda`
 
 ### Setting up your environment
 
