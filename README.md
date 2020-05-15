@@ -38,7 +38,7 @@ CLassical linear models:
 - [notebooks/apoirel-models-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 04
 
 Classical lnear models + time-lagged features
- -[noteboks/apoirel-improved-fe-02.ipynb](noteboks/apoirel-improved-fe-02.ipynb)
+ - [notebooks/apoirel-improved-fe-02.ipynb](noteboks/apoirel-improved-fe-02.ipynb)
 
 FBProphet models:
 - [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 03
