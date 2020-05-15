@@ -1,7 +1,7 @@
 # DengAI: Predicting Disease Spread
 *Anders Poirel, Julian Lehrer*
 
-![A mosquito](http://www.pngall.com/wp-content/uploads/2016/05/Mosquito-High-Quality-PNG.png)
+![A mosquito](http://www.pngall.com/wp-content/uploads/2016/05/Mosquito-High-Quality-PNG.png ! | width=100)
 
 Repository for our work on the  DengAI: Predicting Disease Spread competition on Driven Data
 
@@ -17,7 +17,7 @@ Run
 ```bash
 conda env create -f environment.yml
 ```
-If you already have the environment set up and want to switch to it, run,
+Activate the environment
 ```bash
 conda activate dss-dengueai
 ```
@@ -38,7 +38,10 @@ Gradient boosted models:
 - [notebooks/jlehrer-models-01.ipynb](notebooks/jlehrer-models-01.ipynb)
 
 CLassical linear models:
-- [notebooks/apoirels-models-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 04
+- [notebooks/apoirel-models-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 04
+
+Classical lnear models + time-lagged features
+ -[noteboks/apoirel-improved-fe-02.ipynb](noteboks/apoirel-improved-fe-02.ipynb)
 
 FBProphet models:
 - [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 03
