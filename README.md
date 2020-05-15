@@ -1,15 +1,12 @@
 # DengAI: Predicting Disease Spread
 *Anders Poirel, Julian Lehrer*
 
-![A mosquito](http://www.pngall.com/wp-content/uploads/2016/05/Mosquito-High-Quality-PNG.png ! | width=100)
-
 Repository for our work on the  DengAI: Predicting Disease Spread competition on Driven Data
 
 ## Installation
 
-You'll need to have `conda` installed.
-Clone this repo.
-Next go to [drivendata.org](drivendata.org) and create an account if you want to see your leaderboard performance.
+*Requirements*:
+- `conda`
 
 ### Setting up your environment
 
@@ -41,10 +38,10 @@ CLassical linear models:
 - [notebooks/apoirel-models-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 04
 
 Classical lnear models + time-lagged features
- -[noteboks/apoirel-improved-fe-02.ipynb](noteboks/apoirel-improved-fe-02.ipynb)
+ - [notebooks/apoirel-improved-fe-02.ipynb](notebooks/apoirel-improved-fe-02.ipynb)
 
 FBProphet models:
-- [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 03
+- [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirel-prophet-01.ipynb) 01 through 03
 
 ## Results
 
