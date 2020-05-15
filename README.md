@@ -45,4 +45,4 @@ FBProphet models:
 
 ## 🏆 Results 
 
-Current leaderboard position : 1067 (top 12%)
+Current leaderboard position : 1100 (top 12%)
