@@ -40,7 +40,7 @@ Baselines using linear models:
 Linear model with time-lagged features
  - [notebooks/apoirel-improved-fe-02.ipynb](notebooks/apoirel-improved-fe-02.ipynb)
 
-FBProphet experiements with more or less models:
+FBProphet experiments with more or less models:
 - [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirel-prophet-01.ipynb) 01 through 03
 
 ## 🏆 Results 
