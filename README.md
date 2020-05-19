@@ -34,13 +34,13 @@ Data exploration:
 Gradient boosted models:
 - [notebooks/jlehrer-models-01.ipynb](notebooks/jlehrer-models-01.ipynb)
 
-CLassical linear models:
+Baselines using linear models:
 - [notebooks/apoirel-models-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 04
 
-Classical lnear models + time-lagged features
+Linear model with time-lagged features
  - [notebooks/apoirel-improved-fe-02.ipynb](notebooks/apoirel-improved-fe-02.ipynb)
 
-FBProphet models:
+FBProphet experiements with more or less models:
 - [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirel-prophet-01.ipynb) 01 through 03
 
 ## 🏆 Results 
