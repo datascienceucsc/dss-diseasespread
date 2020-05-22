@@ -37,12 +37,16 @@ Gradient boosted models:
 CLassical linear models:
 - [notebooks/apoirel-models-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 04
 
-Classical lnear models + time-lagged features
- - [notebooks/apoirel-improved-fe-02.ipynb](notebooks/apoirel-improved-fe-02.ipynb)
+Classical linear models + time-lagged features
+- [notebooks/apoirel-improved-fe-02.ipynb](notebooks/apoirel-improved-fe-02.ipynb)
+
+Classical linear model + time-lagged features + prediction using target values with lag 1
+- [notebooks/apoirel-models-05.ipynb](notebooks/apoirel-improved-fe-02.ipynb)
 
 FBProphet models:
 - [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirel-prophet-01.ipynb) 01 through 03
 
 ## Results
 
-Current leaderboard position : 1067 (top 12%)
+Current leaderboard position : 692 (top 7.6%)
+Previous submission position: 1100 (top 12%)
