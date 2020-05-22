@@ -1,7 +1,7 @@
 # DengAI: Predicting Disease Spread
 *Anders Poirel, Julian Lehrer*
 
-Repository for our work on the  DengAI: Predicting Disease Spread competition on Driven Data
+Repository for our work on the  [DengAI: Predicting Disease Spread](https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/) competition on Driven Data
 
 ## Installation
 
@@ -19,7 +19,7 @@ Activate the environment
 conda activate dss-dengueai
 ```
 
-## Downloading original dataset
+### Downloading original dataset
 To get a fresh copy of the original dataset, go to `src/data` and run
 ```bash
 python get_data.py
@@ -34,19 +34,19 @@ Data exploration:
 Gradient boosted models:
 - [notebooks/jlehrer-models-01.ipynb](notebooks/jlehrer-models-01.ipynb)
 
-CLassical linear models:
+Baselines using linear models:
 - [notebooks/apoirel-models-01.ipynb](notebooks/apoirel-models-01.ipynb) 01 through 04
 
-Classical linear models + time-lagged features
+Linear model with time-lagged features
 - [notebooks/apoirel-improved-fe-02.ipynb](notebooks/apoirel-improved-fe-02.ipynb)
 
-Classical linear model + time-lagged features + prediction using target values with lag 1
+Linear model with time-lagged features and predictions using target values with time lag 1
 - [notebooks/apoirel-models-05.ipynb](notebooks/apoirel-improved-fe-02.ipynb)
 
-FBProphet models:
+FBProphet experiments with more or less models:
 - [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirel-prophet-01.ipynb) 01 through 03
 
-## Results
+## 🏆 Results 
 
 Current leaderboard position : 692 (top 7.6%)
 Previous submission position: 1100 (top 12%)
