@@ -3,7 +3,7 @@
 
 Repository for our work on the  [DengAI: Predicting Disease Spread](https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/) competition on Driven Data
 
-- write-up [link](http://anderspoirel.me/reports/lessons-denguai/)
+- write-up [link](https://anderspoirel.me/reports/lessons-denguai/)
 
 ## Installation
 
