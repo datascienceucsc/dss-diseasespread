@@ -11,8 +11,9 @@ def add_lagged_features(df: pd.DataFrame, max_lag: int,
     ]
     return pd.concat([df] + lag_df, axis = 1)
 
-def clean_build(raw_path: str, processed_path: str,
- data: str, build_files: bool = True) -> pd.DataFrame:
+def make_lagged_data(
+    raw_path: str, processed_path: str, data: str, build_files: bool = True
+) -> pd.DataFrame:
 
     if data not in ['train', 'test']:
         raise ValueError('Argument \'data\' must be one of \'train\', \'test')
@@ -39,12 +40,14 @@ def clean_build(raw_path: str, processed_path: str,
         )
     )
     ts_features = list(
-        features.loc[:, 'precipitation_amt_mm' : 'ndvi_s'].columns.values)
+        features.loc[
+            :, 'reanalysis_relative_humidity_percent' : 'ndvi_s'
+    ].columns.values)
 
     features_sj = features[
-        features['city'] == 'sj'].drop('city', axis = 1)
+        features['city'] == 'sj']
     features_iq = features[
-        features['city'] == 'iq'].drop('city', axis = 1)
+        features['city'] == 'iq']
 
     features_sj = add_lagged_features(
         features_sj, 7, ts_features).fillna(method = 'backfill')
@@ -54,19 +57,19 @@ def clean_build(raw_path: str, processed_path: str,
     features = pd.concat([features_sj, features_iq], axis = 0)
     if build_files:
         features.to_csv(
-            os.path.join(processed_path, 'lag7_features_' + data + '.csv'),
+            os.path.join(processed_path, 'lag7_features' + data + '.csv'),
             index = False)
 
     return features
     
 if __name__ == "__main__":
-    clean_build(
+    make_lagged_data(
         '../../data/raw',
         '../../data/processed',
-        data = 'train'
+        data = 'train',
     )
-    clean_build(
+    make_lagged_data(
         '../../data/raw',
         '../../data/processed',
-        data = 'test'
+        data = 'test',
     )
