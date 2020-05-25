@@ -43,7 +43,8 @@ def make_merged_data(
             'station_max_temp_c', 'reanalysis_max_air_temp_k',
             'station_min_temp_c', 'reanalysis_min_air_temp_k',
             'station_avg_temp_c', 'reanalysis_avg_temp_k', 'reanalysis_air_temp_k',
-            'station_precip_mm', 'reanalysis_sat_precip_amt_mm'
+            'station_precip_mm', 'reanalysis_sat_precip_amt_mm',
+            'station_diur_temp_rng_c', 'reanalysis_tdtr_k'
             ],
             axis = 1
         )
