@@ -43,7 +43,7 @@ Linear model with time-lagged features
 - [notebooks/apoirel-improved-fe-02.ipynb](notebooks/apoirel-improved-fe-02.ipynb)
 
 Linear model with time-lagged features and predictions using target values with time lag 1
-- [notebooks/apoirel-models-05.ipynb](notebooks/apoirel-improved-fe-02.ipynb)
+- [notebooks/apoirel-models-05.ipynb](notebooks/apoirel-models-05.ipynb.ipynb)
 
 FBProphet experiments with more or less models:
 - [notebooks/apoirels-prophet-01.ipynb](notebooks/apoirel-prophet-01.ipynb) 01 through 03
