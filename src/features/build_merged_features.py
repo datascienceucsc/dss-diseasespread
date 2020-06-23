@@ -13,7 +13,7 @@ def make_merged_data(
     features = pd.read_csv(
         os.path.join(raw_path, 'dengue_features_' + data + '.csv'))
 
-    # celsius conversions
+    # kelvin conversions
     features['station_max_temp_c'] += 273.15
     features['station_min_temp_c'] += 273.15
     features['station_avg_temp_c'] += 273.15
@@ -62,7 +62,7 @@ def make_merged_data(
     return features
 
 if __name__ == "__main__":
-
+    
     make_merged_data(
         '../../data/raw','../../data/processed', data = 'train'
     )
