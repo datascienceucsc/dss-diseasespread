@@ -1,9 +1,14 @@
 import pandas as pd 
 import os 
+import sys
 from typing import List
 
 def add_lagged_features(df: pd.DataFrame, max_lag: int,
  features: List[str]) -> pd.DataFrame:
+    """
+    Creates columns with lagged data up to lag max_lag for each column 
+    listed in features
+    """
 
     lag_df = [
         df[features].shift(k).add_prefix('lag' + str(k) + '_') 
@@ -57,19 +62,17 @@ def make_lagged_data(
     features = pd.concat([features_sj, features_iq], axis = 0)
     if build_files:
         features.to_csv(
-            os.path.join(processed_path, 'lag7_features' + data + '.csv'),
-            index = False)
+            os.path.join(processed_path, 'lag7_features_' + data + '.csv'),
+            index = False
+        )
 
     return features
     
 if __name__ == "__main__":
-    make_lagged_data(
-        '../../data/raw',
-        '../../data/processed',
-        data = 'train',
-    )
-    make_lagged_data(
-        '../../data/raw',
-        '../../data/processed',
-        data = 'test',
-    )
+    if len(sys.argv) != 3:
+        raise ValueError(
+            'Usage: python build_lagged_features.py <raw data path> <processed data path>'
+        )
+
+    make_lagged_data(sys.argv[1], sys.argv[2], data = 'train')
+    make_lagged_data(sys.argv[1], sys.argv[2], data = 'test')

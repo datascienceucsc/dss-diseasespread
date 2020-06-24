@@ -1,25 +1,20 @@
 import pandas as pd 
 import os
+import sys
 from typing import List
 
 
-def make_merged_data(
-    raw_path: str, processed_path: str, data: str, build_files: bool = True
-)-> pd.DataFrame:
-
-    if data not in ['train', 'test']:
-        raise ValueError('Argument \'data\' must be one of \'train\', \'test')
-
-    features = pd.read_csv(
-        os.path.join(raw_path, 'dengue_features_' + data + '.csv'))
+def merge_features(df: pd.DataFrame)-> pd.DataFrame:
+    """ 
+    Merges features that estimate the same thing
+    """
 
     # kelvin conversions
-    features['station_max_temp_c'] += 273.15
-    features['station_min_temp_c'] += 273.15
-    features['station_avg_temp_c'] += 273.15
+    df['station_max_temp_c'] += 273.15
+    df['station_min_temp_c'] += 273.15
+    df['station_avg_temp_c'] += 273.15
 
-    features = (features
-        .drop(['weekofyear', 'year'], axis = 1)    
+    df = (df
         .fillna(method = 'backfill')
         .assign( # create average estimates for data
             ndvi_n = lambda x: 
@@ -48,24 +43,38 @@ def make_merged_data(
             ],
             axis = 1
         )
-        .drop( # features strongly correlated to other features
-            ['reanalysis_specific_humidity_g_per_kg'],
-            axis = 1
-        )
     )
+    return df
+
+def make_merged_data(
+    raw_path: str, processed_path: str,data: str, build_files: bool = True
+) -> pd.DataFrame:
+
+    if data not in ['train', 'test']:
+        raise ValueError('Argument \'data\' must be one of \'train\', \'test')
+
+    features = pd.read_csv(
+         os.path.join(raw_path, 'dengue_features_' + data + '.csv')
+    )
+    features = merge_features(features)
+    features.drop(
+        ['year', 'weekofyear', 'reanalysis_specific_humidity_g_per_kg'],
+        axis = 1
+    )
+
     if build_files:
         features.to_csv(
             os.path.join(processed_path, 'merged_features_' + data + '.csv'),
             index = False
-        )
+    )
 
     return features
 
 if __name__ == "__main__":
-    
-    make_merged_data(
-        '../../data/raw','../../data/processed', data = 'train'
-    )
-    make_merged_data(
-        '../../data/raw','../../data/processed',data = 'test'
-    )
+    if len(sys.argv) != 3:
+        raise ValueError(
+            'Usage: python build_merged_features.py <raw data path> <processed data path>'
+        )
+
+    make_merged_data(sys.argv[1], sys.argv[2], data = 'train')
+    make_merged_data(sys.argv[1], sys.argv[2], data = 'test')
