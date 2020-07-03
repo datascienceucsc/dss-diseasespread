@@ -2,8 +2,7 @@ import pandas as pd
 import os
 import sys
 
-from build_lagged_features import add_lagged_features
-from build_merged_features import merge_features  
+from utilities import add_lagged_features, merge_features
 
 def make_features(raw_path: str, processed_path: str, data: str):
 
@@ -12,10 +11,16 @@ def make_features(raw_path: str, processed_path: str, data: str):
     )
 
     df = merge_features(df)
+    df['week_start_date'] = pd.to_datetime(df['week_start_date']).dt.month
+    df = df.rename({'week_start_date': 'monthofyear'}, axis = 1)
     df = df.drop( # drop unused and correlated features
-        ['year', 'weekofyear', 'reanalysis_precip_amt_kg_per_m2', 'reanalysis_specific_humidity_g_per_kg'],
+        ['year', 'weekofyear', 'reanalysis_precip_amt_kg_per_m2', 
+         'reanalysis_specific_humidity_g_per_kg'],
         axis = 1
     )
+
+    print(df.columns.values)
+
     ts_features = list(df.loc[:, 'precipitation_amt_mm':].columns.values)
 
     df_sj = df[df['city'] == 'sj']
@@ -26,8 +31,6 @@ def make_features(raw_path: str, processed_path: str, data: str):
     df_iq = add_lagged_features(
         df_iq, 7, ts_features).fillna(method = 'backfill')
     df = pd.concat([df_sj, df_iq], axis = 0)
-
-    print(df.columns.values)
 
     df.to_csv(
         os.path.join(processed_path, 'merged_lag7_features_' + data + '.csv'),

@@ -3,18 +3,7 @@ import os
 import sys
 from typing import List
 
-def add_lagged_features(df: pd.DataFrame, max_lag: int,
- features: List[str]) -> pd.DataFrame:
-    """
-    Creates columns with lagged data up to lag max_lag for each column 
-    listed in features
-    """
-
-    lag_df = [
-        df[features].shift(k).add_prefix('lag' + str(k) + '_') 
-        for k in range(1, max_lag+1)
-    ]
-    return pd.concat([df] + lag_df, axis = 1)
+from utilities import add_lagged_features
 
 def make_lagged_data(
     raw_path: str, processed_path: str, data: str, build_files: bool = True
