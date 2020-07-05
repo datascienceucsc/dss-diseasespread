@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
-import sklearn
 import os
+
+from sklearn.base import BaseEstimator, RegressorMixin
 
 def build_submission(
     model_sj: sklearn.base.BaseEstimator, 
@@ -12,6 +13,7 @@ def build_submission(
     pred_path: str,
     name: str
 )-> pd.DataFrame:
+
     submission = pd.read_csv(
         os.path.join(raw_path, 'submission_format.csv'))
 
@@ -26,3 +28,30 @@ def build_submission(
     )
 
     return submission
+    
+
+# class from wrapping statsmodels regressors with a scikit-learn
+# interface
+
+
+from sklearn.base import BaseEstimator, RegressorMixin
+
+class SMWrapper(BaseEstimator, RegressorMixin):
+    """ 
+    A universal sklearn-style wrapper for statsmodels regressors 
+    """
+
+    def __init__(self, model_class, fit_intercept=True):
+        self.model_class = model_class
+        self.fit_intercept = fit_intercept
+
+    def fit(self, X, y):
+        if self.fit_intercept:
+            X = sm.add_constant(X)
+        self.model_ = self.model_class(y, X)
+        self.results_ = self.model_.fit()
+        
+    def predict(self, X):
+        if self.fit_intercept:
+            X = sm.add_constant(X)
+        return self.results_.predict(X)
