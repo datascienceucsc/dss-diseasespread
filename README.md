@@ -5,7 +5,7 @@ Repository for our work on the  [DengAI: Predicting Disease Spread](https://www.
 
 - write-up [link](https://anderspoirel.me/lessons-denguai/)
 
-## Installation
+## ⚙ Setup
 
 *Requirements*:
 - `conda`
@@ -27,7 +27,7 @@ To get a fresh copy of the original dataset, go to `src/data` and run
 python get_data.py
 ```
 
-## Work
+## ⚒ Work
 
 Data exploration:
 - Anders [notebooks/apoirel-exploration-01.ipynb](notebooks/apoirel-exploration-01.ipynb)
